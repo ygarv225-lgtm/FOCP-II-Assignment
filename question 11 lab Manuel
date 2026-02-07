@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  
+    int quantity;
+    double pricePerItem;
+    double totalExpense;
+
+
+    cout << "Enter the number of items: ";
+    cin >> quantity;
+
+    cout << "Enter the price per item: ";
+    cin >> pricePerItem;
+
+
+    totalExpense = quantity * pricePerItem;
+
+    if (quantity > 1000) {
+        double discount = totalExpense * 0.10; // Calculate 10% of the total
+        totalExpense = totalExpense - discount; // Subtract it from the total
+        
+        cout << "A 10% discount has been applied!" << endl;
+    }
+
+    cout << "Total expense: $" << totalExpense << endl;
+
+    return 0;
+}
