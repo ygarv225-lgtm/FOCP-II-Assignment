@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter total number of entries: ";
+    cin >> n;
+
+    int maxSales;
+    cout << "Enter number 1: ";
+    cin >> maxSales;
+
+    int currentSales;
+    for (int i = 2; i <= n; i++) {
+        cout << "Enter number " << i << ": ";
+        cin >> currentSales;
+
+        if (currentSales > maxSales) {
+            maxSales = currentSales;
+        }
+    }
+
+    cout << "The largest sales figure is: " << maxSales << endl;
+
+    return 0;
+}
